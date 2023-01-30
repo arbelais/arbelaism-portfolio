@@ -1,0 +1,38 @@
+---
+import { Sprite } from "astro-icon";
+---
+
+<nav
+    class="m-4 p-12 h-16 flex items-center justify-between backdrop-blur-sm bg-white/10 rounded-xl shadow-xl"
+>
+    <a href="/">
+        <h1
+            class="text-transparent text-xl md:text-2xl lg:text-3xl tracking-tight font-extrabold font-Montserrat bg-gradient-to-b from-gray-600 via-gray-800 to-black bg-clip-text"
+        >
+            arbelaism
+        </h1>
+    </a>
+    <div
+        class="h-full flex justify-center items-center gap-6 opacity-1"
+        id="links"
+    >
+        <a href="#projects" class="w-max h-max text-lg cursor-pointer"
+            >Projects</a
+        >
+        <a href="#contact" class="w-max h-max text-lg cursor-pointer">Contact</a
+        >
+        <a href="#about" class="w-max h-max text-lg cursor-pointer">About</a>
+        <a
+            href="https://github.com/arbelais"
+            class="w-max h-max cursor-pointer"
+        >
+            <Sprite name="mdi:github" class="icon-sm" />
+        </a>
+        <a
+            href="https://www.linkedin.com/in/arbelaism"
+            class="w-max h-max cursor-pointer"
+        >
+            <Sprite name="mdi:linkedin" class="icon-sm" />
+        </a>
+    </div>
+</nav>

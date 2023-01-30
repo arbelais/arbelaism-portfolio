@@ -1,0 +1,109 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Mulish:wght@400;500;600&display=swap");
+
+body {
+  /* background-color: rgb(207, 250, 254); */
+  /* background-image: radial-gradient( */
+  /*     at 22% 22%, */
+  /*     rgb(255, 237, 213) 0, */
+  /*     transparent 58% */
+  /*   ), */
+  /*   radial-gradient(at 17% 39%, rgb(244, 63, 94) 0, transparent 35%), */
+  /*   radial-gradient(at 56% 32%, rgb(147, 51, 234) 0, transparent 63%), */
+  /*   radial-gradient(at 84% 42%, rgb(237, 233, 254) 0, transparent 100%), */
+  /*   radial-gradient(at 60% 53%, rgb(139, 92, 246) 0, transparent 68%), */
+  /*   radial-gradient(at 29% 31%, rgb(168, 162, 158) 0, transparent 42%); */
+
+  /* background-color: rgb(131, 24, 67); */
+  /* background-image: radial-gradient( */
+  /*     at 18% 72%, */
+  /*     rgb(109, 40, 217) 0, */
+  /*     transparent 69% */
+  /*   ), */
+  /*   radial-gradient(at 58% 28%, rgb(228, 228, 231) 0, transparent 84%), */
+  /*   radial-gradient(at 56% 81%, rgb(245, 245, 245) 0, transparent 27%), */
+  /*   radial-gradient(at 93% 88%, rgb(249, 115, 22) 0, transparent 16%), */
+  /*   radial-gradient(at 46% 42%, rgb(68, 64, 60) 0, transparent 33%), */
+  /*   radial-gradient(at 58% 4%, rgb(120, 53, 15) 0, transparent 12%); */
+
+  background-color: rgb(82, 82, 91);
+  background-image: radial-gradient(
+      at 69% 65%,
+      rgb(99, 102, 241) 0,
+      transparent 14%
+    ),
+    radial-gradient(at 31% 48%, rgb(110, 231, 183) 0, transparent 48%),
+    radial-gradient(at 4% 25%, rgb(110, 231, 183) 0, transparent 39%),
+    radial-gradient(at 44% 88%, rgb(190, 18, 60) 0, transparent 28%),
+    radial-gradient(at 96% 55%, rgb(168, 85, 247) 0, transparent 50%),
+    radial-gradient(at 21% 35%, rgb(249, 168, 212) 0, transparent 85%);
+}
+
+#main-title {
+  animation: fadeInAnimation 1s ease, center 1.2s ease 2000ms;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+.show {
+  animation: fadeInAnimation 1s ease;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+.show-delay {
+  visibility: hidden;
+  animation: fadeInAnimation .5s ease 3000ms;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+#name {
+  animation: hide ease 0.7s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-delay: 1500ms;
+}
+
+@keyframes fadeInAnimation {
+  0% {
+    visibility: hidden;
+    opacity: 0;
+  }
+  100% {
+    visibility: visible;
+    opacity: 100;
+  }
+}
+
+@keyframes center {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(25%);
+  }
+}
+
+@keyframes hide {
+  0% {
+    visibility: visible;
+    opacity: 1;
+  }
+  100% {
+    visibility: hidden;
+    opacity: 0;
+  }
+}
+
+[astro-icon] {
+  width: 3.5rem;
+  height: 3.5rem;
+  fill: #111827;
+}
+
+.icon-sm {
+  width: 2rem;
+  height: 2rem;
+}
