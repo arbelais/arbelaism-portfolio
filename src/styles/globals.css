@@ -54,7 +54,7 @@ body {
 
 .show-delay {
   visibility: hidden;
-  animation: fadeInAnimation .5s ease 3000ms;
+  animation: fadeInAnimation 0.5s ease 3000ms;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
 }
@@ -95,12 +95,6 @@ body {
     visibility: hidden;
     opacity: 0;
   }
-}
-
-[astro-icon] {
-  width: 3.5rem;
-  height: 3.5rem;
-  fill: #111827;
 }
 
 .icon-sm {
