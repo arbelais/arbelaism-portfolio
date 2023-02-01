@@ -2,7 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@400;500;600;700;800;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Mulish:wght@400;500;600&display=swap");
 
-body {
+.background {
   /* background-color: rgb(207, 250, 254); */
   /* background-image: radial-gradient( */
   /*     at 22% 22%, */
@@ -40,62 +40,6 @@ body {
     radial-gradient(at 21% 35%, rgb(249, 168, 212) 0, transparent 85%);
 }
 
-#main-title {
-  animation: fadeInAnimation 1s ease, center 1.2s ease 2000ms;
-  animation-iteration-count: 1;
-  animation-fill-mode: forwards;
-}
-
-.show {
-  animation: fadeInAnimation 1s ease;
-  animation-iteration-count: 1;
-  animation-fill-mode: forwards;
-}
-
-.show-delay {
-  visibility: hidden;
-  animation: fadeInAnimation 0.5s ease 3000ms;
-  animation-iteration-count: 1;
-  animation-fill-mode: forwards;
-}
-
-#name {
-  animation: hide ease 0.7s;
-  animation-iteration-count: 1;
-  animation-fill-mode: forwards;
-  animation-delay: 1500ms;
-}
-
-@keyframes fadeInAnimation {
-  0% {
-    visibility: hidden;
-    opacity: 0;
-  }
-  100% {
-    visibility: visible;
-    opacity: 100;
-  }
-}
-
-@keyframes center {
-  0% {
-    transform: translateX(0%);
-  }
-  100% {
-    transform: translateX(25%);
-  }
-}
-
-@keyframes hide {
-  0% {
-    visibility: visible;
-    opacity: 1;
-  }
-  100% {
-    visibility: hidden;
-    opacity: 0;
-  }
-}
 
 .icon-sm {
   width: 2rem;
