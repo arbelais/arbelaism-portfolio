@@ -18,7 +18,26 @@ const { title } = Astro.props;
         <meta name="generator" content={Astro.generator} />
         <title>{title}</title>
     </head>
-    <body class="bg-zinc-200 w-full h-screen font-Mulish">
+    <body
+        class="bg-zinc-200 dark:bg-zinc-900 w-full h-screen font-Mulish flex flex-col items-center transition-all"
+    >
         <slot />
     </body>
 </html>
+<script>
+    window.addEventListener("scroll", (e) => {
+        let scrolled = window.pageYOffset;
+        setTimeout(() => {
+            if (scrolled == window.pageYOffset) {
+                if (scrolled % window.innerHeight >= window.innerHeight / 4) {
+                    window.scrollBy(
+                        0,
+                        window.innerHeight - (scrolled % window.innerHeight)
+                    );
+                } else {
+                    window.scrollBy(0, -(scrolled % window.innerHeight));
+                }
+            }
+        }, 100);
+    });
+</script>

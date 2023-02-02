@@ -2,9 +2,35 @@
 import Navbar from "components/Navbar.astro";
 import Home from "components/Home.astro";
 import Layout from "layouts/Layout.astro";
+import Projects from "components/Projects.astro";
+import Contact from "components/Contact.astro";
 ---
 
 <Layout title="Home - arbelaism">
     <Navbar />
-    <Home />
+    <div class="w-full h-screen grid place-content-center">
+        <Home />
+    </div>
+    <div class="w-full h-screen grid place-content-center">
+        <Projects />
+    </div>
+    <div class="w-full h-screen grid place-content-center">
+        <Contact />
+    </div>
 </Layout>
+
+<script>
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            console.log(entry.isIntersecting);
+            if (entry.isIntersecting) {
+                entry.target.classList.add("show-card");
+            } else {
+                entry.target.classList.remove("show-card");
+            }
+        });
+    });
+
+    const hiddenElements = document.querySelectorAll(".hide-card");
+    hiddenElements.forEach((el) => observer.observe(el));
+</script>
