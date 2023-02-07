@@ -52,12 +52,10 @@
 .hide-card {
   opacity: 0;
   filter: blur(5px);
-  transform: translateX(-100%);
-  transition: all 1s ease 500ms;
+  transition: all 0.75s ease;
 }
 
 .show-card {
   filter: blur(0);
-  transform: translateX(0);
   opacity: 1;
 }

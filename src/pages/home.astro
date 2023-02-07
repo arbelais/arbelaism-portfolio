@@ -8,28 +8,27 @@ import Contact from "components/Contact.astro";
 
 <Layout title="Home - arbelaism">
     <Navbar />
-    <div class="w-full h-screen grid place-content-center">
-        <Home />
-    </div>
-    <div class="w-full h-screen grid place-content-center">
-        <Projects />
-    </div>
-    <div class="w-full h-screen grid place-content-center">
-        <Contact />
-    </div>
+    <Home />
+    <Projects />
+    <Contact />
 </Layout>
 
 <script>
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-            console.log(entry.isIntersecting);
-            if (entry.isIntersecting) {
-                entry.target.classList.add("show-card");
-            } else {
-                entry.target.classList.remove("show-card");
-            }
-        });
-    });
+    const observer = new IntersectionObserver(
+        (entries) => {
+            entries.forEach((entry) => {
+                console.log(entry.isIntersecting);
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("show-card");
+                } else {
+                    entry.target.classList.remove("show-card");
+                }
+            });
+        },
+        {
+            threshold: 1,
+        }
+    );
 
     const hiddenElements = document.querySelectorAll(".hide-card");
     hiddenElements.forEach((el) => observer.observe(el));
