@@ -1,6 +1,6 @@
 <nav
     id="navbar"
-    class="fixed top-0 w-11/12 m-4 p-12 h-16 flex items-center justify-between backdrop-blur-sm bg-black/10 rounded-xl shadow-xl transition-all z-40"
+    class="fixed top-0 w-11/12 m-4 p-12 h-16 flex items-center justify-between backdrop-blur-sm bg-black/10 rounded-xl shadow-xl transition-all duration-200 z-40"
 >
     <a href="/">
         <h1
@@ -82,19 +82,19 @@
 
 <script>
     import { toggleDarkMode } from "utils/toggleDarkMode";
-    const nav = document.getElementById("navbar");
+    // const nav = document.getElementById("navbar");
 
-    window.addEventListener("scroll", () => {
-        if (!nav) return;
+    // window.addEventListener("scroll", () => {
+    //     if (!nav) return;
 
-        if (window.scrollY > 50) {
-            nav.classList.remove("m-4", "w-11/12", "rounded-xl");
-            nav.classList.add("w-full");
-        } else {
-            nav.classList.add("m-4", "w-11/12", "rounded-xl");
-            nav.classList.remove("w-full");
-        }
-    });
+    //     if (window.scrollY > 50) {
+    //         nav.classList.remove("m-4", "w-11/12", "rounded-xl");
+    //         nav.classList.add("w-full");
+    //     } else {
+    //         nav.classList.add("m-4", "w-11/12", "rounded-xl");
+    //         nav.classList.remove("w-full");
+    //     }
+    // });
 
     toggleDarkMode();
 </script>

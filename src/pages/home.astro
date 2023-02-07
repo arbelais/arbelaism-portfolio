@@ -1,5 +1,4 @@
 ---
-import Navbar from "components/Navbar.astro";
 import Home from "components/Home.astro";
 import Layout from "layouts/Layout.astro";
 import Projects from "components/Projects.astro";
@@ -7,7 +6,6 @@ import Contact from "components/Contact.astro";
 ---
 
 <Layout title="Home - arbelaism">
-    <Navbar />
     <Home />
     <Projects />
     <Contact />
@@ -17,8 +15,22 @@ import Contact from "components/Contact.astro";
     const observer = new IntersectionObserver(
         (entries) => {
             entries.forEach((entry) => {
-                console.log(entry.isIntersecting);
                 if (entry.isIntersecting) {
+                    const nav = document.getElementById("navbar");
+                    if (entry.target.id === "home") {
+                        if (!nav) return;
+                        nav.classList.add("m-4", "w-11/12", "rounded-xl");
+                        nav.classList.remove("w-full");
+                    }
+                    if (
+                        entry.target.id === "projects" ||
+                        entry.target.id === "contact"
+                    ) {
+                        if (!nav) return;
+                        nav.classList.remove("m-4", "w-11/12", "rounded-xl");
+                        nav.classList.add("w-full");
+                    }
+
                     entry.target.classList.add("show-card");
                 } else {
                     entry.target.classList.remove("show-card");
@@ -26,7 +38,7 @@ import Contact from "components/Contact.astro";
             });
         },
         {
-            threshold: 1,
+            threshold: 0.5,
         }
     );
 
