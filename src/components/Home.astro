@@ -1,3 +1,7 @@
+---
+import { Trans, LanguageSelector } from "astro-i18next/components";
+---
+
 <section
     id="home"
     class="hide-card w-full h-screen flex items-center justify-center gap-5 snap-center border border-red-500"
@@ -11,8 +15,10 @@
         </h1>
         <h4 class="text-2xl font-semibold">Full Stack Developer</h4>
         <p>
-            Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint
-            cillum sint consectetur cupidatat.
+            <Trans i18nKey="home.description">
+                Lorem ipsum dolor sit amet, qui minim labore adipisicing minim
+                sint cillum sint consectetur cupidatat.
+            </Trans>
         </p>
     </div>
 </section>

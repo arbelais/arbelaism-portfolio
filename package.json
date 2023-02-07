@@ -8,17 +8,21 @@
         "start": "astro dev",
         "build": "astro build",
         "preview": "astro preview",
-        "astro": "astro"
+        "astro": "astro",
+        "i18n:generate": "astro-i18next generate"
     },
     "dependencies": {
         "@astrojs/tailwind": "^3.0.0",
         "astro": "^2.0.1",
+        "astro-i18next": "1.0.0-beta.17",
+        "i18next": "^22.4.9",
         "tailwindcss": "^3.0.24",
         "typescript": "^4.9.4"
     },
     "devDependencies": {
         "@typescript-eslint/parser": "^5.49.0",
         "eslint": "^8.32.0",
-        "eslint-plugin-astro": "^0.23.0"
+        "eslint-plugin-astro": "^0.23.0",
+        "i18next-fs-backend": "^2.1.1"
     }
 }

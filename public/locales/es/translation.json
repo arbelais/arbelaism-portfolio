@@ -1,0 +1,12 @@
+{
+    "site": {
+        "title": "arbelaism - Portfolio",
+        "description": "Mi Portfolio",
+        "headline": "Desarrollador Full Stack"
+    },
+    "home": {
+        "title": "arbelaism - Inicio",
+        "subtitle": "Español",
+        "description": "Descripcion en español de prueba"
+    }
+}

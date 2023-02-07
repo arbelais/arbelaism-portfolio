@@ -1,0 +1,11 @@
+{
+    "site": {
+        "title": "arbelaism - Portfolio",
+        "description": "My Portfolio",
+        "headline": "Full Stack Developer"
+    },
+    "home": {
+        "title": "arbelaism - Home",
+        "description": "Eng description"
+    }
+}
